@@ -1,0 +1,38 @@
+{
+  "manifest_version": "2",
+  "buildnumber": "1.1.1",
+  "parameters": {
+    "all":{
+      "non_secrets":{
+	    "secret_provider":"jenkins",
+		"platform": "gcp",
+		
+	  }
+	  "secrets":{
+	  
+	  }
+    },
+	"dev":{
+	  "us-east-1":{
+	    "lifecycle": {
+		  "secret":{},
+		  "non_secrets":{
+		  "#PARAM-DB-PROXY-URL#":false
+		  "#PARAM-IN-MAINTAINANCE#": false
+		  }
+		}
+	  }
+	}
+	"prod":{
+	  "us-east-1":{
+	    "lifecycle": {
+		  "secret":{},
+		  "non_secrets":{
+		  "#PARAM-DB-PROXY-URL#":false
+		  "#PARAM-IN-MAINTAINANCE#": false
+		  }
+		}
+	  }
+	}
+  }
+}
